@@ -247,7 +247,8 @@ hr{
     top: 50%;
     transform: translate(-50%,-50%);
 }
-.pup {
+.pup,
+.sec {
     background-color: #111827;
     color: #FFFFFF;
     font-size: 38px;
@@ -261,21 +262,6 @@ hr{
     box-shadow: 0 0 20px var(--main-color);
     position: fixed;
     z-index: 999;
-    opacity: 0.9;
-}
-.sec{
-    position: fixed;
-    padding: 100px 20px;
-    width: 80%;
-    text-align: center;
-    color: #FFFFFF;
-    background-color: #111827;
-    border-radius: 12px;
-    left: 10%;
-    top: 29%;
-    font-size: 38px;
-    border: 2px solid var(--main-color);
-    box-shadow: 0 0 20px var(--main-color);
     opacity: 0.9;
 }
 .font{
