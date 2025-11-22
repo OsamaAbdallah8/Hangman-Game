@@ -268,3 +268,54 @@ hr{
     color: #00E1A2;
     font-weight: bold;
 }
+.foot {
+    background-color: #111827;
+    padding: 20px 15px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    border-top: 1px solid var(--main-color);
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .game-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .pup,
+    .sec{
+        font-size: 24px;
+        top: 382px;
+    }
+    .foot {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 15px 10px;
+        font-size: 12px;
+        background-color: #111827;
+        color: white;
+        border-top: 1px solid var(--main-color);
+        z-index: 999;
+    }
+    body {
+        padding-bottom: 70px;
+    }
+}
+
