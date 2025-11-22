@@ -44,36 +44,22 @@ hr{
     border-radius: 10px;
     box-shadow: 0 0 10px #0d111745;
 }
-.hangman-draw.wrong-1 .the-draw {
-    display: block;
-}
-.hangman-draw.wrong-2 .the-draw .the-stand {
-    display: block;
-}
-.hangman-draw.wrong-3 .the-draw .the-hang {
-    display: block;
-}
-.hangman-draw.wrong-4 .the-draw .the-rope {
-    display: block;
-}
-.hangman-draw.wrong-5 .the-draw .the-man .head {
-    display: block;
-}
-.hangman-draw.wrong-6 .the-draw .the-man .body {
-    display: block;
-}
-.hangman-draw.wrong-7 .the-draw .the-man .hands {
-    display: block;
-}
-.hangman-draw.wrong-8 .the-draw .the-man .legs {
-    display: block;
-}
+
+.hangman-draw.wrong-1 .the-draw { display: block; }
+.hangman-draw.wrong-2 .the-draw .the-stand { display: block; }
+.hangman-draw.wrong-3 .the-draw .the-hang { display: block; }
+.hangman-draw.wrong-4 .the-draw .the-rope { display: block; }
+.hangman-draw.wrong-5 .the-draw .the-man .head { display: block; }
+.hangman-draw.wrong-6 .the-draw .the-man .body { display: block; }
+.hangman-draw.wrong-7 .the-draw .the-man .hands { display: block; }
+.hangman-draw.wrong-8 .the-draw .the-man .legs { display: block; }
+
 .hangman-draw .the-draw{
     position: relative;
     width: 64px;
     height: 280px;
     margin: auto;
-    border-bottom: var(--main-width) solid var(--main-color) ;
+    border-bottom: var(--main-width) solid var(--main-color);
     left: -60px;
     display: none;
 }
@@ -137,9 +123,8 @@ hr{
     left: 129px;
     display: none;
 }
-.hangman-draw .the-draw .the-man .hands{
-    display: none;
-}
+
+.hangman-draw .the-draw .the-man .hands{ display: none; }
 .hangman-draw .the-draw .the-man .hands::before,
 .hangman-draw .the-draw .the-man .hands::after{
     content: '';
@@ -157,9 +142,8 @@ hr{
     left: 128px;
     transform: rotate(-30deg);
 }
-.hangman-draw .the-draw .the-man .legs{
-    display: none;
-}
+
+.hangman-draw .the-draw .the-man .legs{ display: none; }
 .hangman-draw .the-draw .the-man .legs::before,
 .hangman-draw .the-draw .the-man .legs::after{
     content: '';
@@ -221,16 +205,14 @@ hr{
     width: 60px;
     height: 60px;
     line-height: 60px;
-    border-bottom: 3px solid var(--main-color);
     background-color: #0D1117;
     margin-right: 10px;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 3px solid #00ADB5;
+    border-bottom: 3px solid var(--main-color);
     color: #00E1A2;
-    transition: 0.3s;
 }
 .letters-guess span.has-space{
     background: none;
@@ -279,15 +261,15 @@ hr{
     margin-top: 100px;
     margin-bottom: 0;
 }
-@media (max-width: 992px) {
-    .container {
-        width: 90%;
-        margin: 10px auto;
-    }
-}
+/* ================= MOBILE FIXED VERSION ================= */
 @media (max-width: 768px) {
+    body {
+        padding-bottom: 60px;
+    }
+
     .container {
-        width: 95%;
+        width: 100%;
+        margin: 5px auto;
     }
     .row {
         flex-direction: column;
@@ -295,27 +277,58 @@ hr{
     .game-info {
         flex-direction: column;
         text-align: center;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .hangman-draw {
+        padding: 10px;
+        height: 200px;
+    }
+    .hangman-draw .the-draw {
+        transform: scale(0.7);
+        left: -20px;
+    }
+    .letters {
+        padding: 5px;
+    }
+    .letters .text-letter {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        margin-right: 5px;
+        margin-bottom: 6px;
+    }
+    .letters-guess {
+        min-height: 60px;
+        padding: 10px;
+    }
+    .letters-guess span {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin-right: 5px;
+        font-size: 16px;
     }
     .pup,
-    .sec{
-        font-size: 24px;
-        top: 382px;
+    .sec {
+        width: 90%;
+        padding: 40px 10px;
+        font-size: 22px;
+        top: 333px;
+        left: 22px;
     }
     .foot {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
+        padding: 10px;
         margin: 0;
-        padding: 15px 10px;
-        font-size: 12px;
+        font-size: 11px;
         background-color: #111827;
         color: white;
         border-top: 1px solid var(--main-color);
         z-index: 999;
     }
-    body {
-        padding-bottom: 70px;
-    }
 }
-
